@@ -1,7 +1,7 @@
 header {
     background-color: var(--backgroundDark);
     color: var(--textPrimary);
-    border-bottom: 4px solid var(--accent);
+    border-bottom: var(--boxBorder);
     height: 90px;
     display: flex;
     align-items: center;
