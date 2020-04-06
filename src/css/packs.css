@@ -1,0 +1,23 @@
+.packs-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px
+}
+.pack {
+    padding: 20px 10px;
+    border-radius: 15px;
+}
+.pack h1 {
+    margin: 0px 8px 10px 8px;
+}
+.pack p {
+    margin: 0px 8px;
+}
+.simple {
+    background: rgb(2,0,36);
+    background: linear-gradient(149deg, rgba(2,0,36,1) 0%, rgba(4,4,94,1) 35%, rgba(0,212,255,1) 100%);
+}
+.normal {
+    background: rgb(85,0,0);
+    background: linear-gradient(149deg, rgba(85,0,0,1) 0%, rgba(176,71,0,1) 35%, rgba(207,153,0,1) 100%);
+}
