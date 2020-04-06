@@ -1,0 +1,52 @@
+footer {
+    height: 140px;
+    background-color: var(--backgroundDark);
+    border-top: var(--boxBorder)
+}
+
+footer section {
+    width: 800px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    display: grid;
+    grid-template-columns: max-content 1fr max-content max-content;
+    grid-template-areas: "logo . phone email";
+    gap: 40px;
+}
+
+footer section img {
+    grid-area: logo;
+    height: 80%;
+}
+
+footer section .footerInfoBox {
+    text-align: center;
+}
+
+footer section .footerInfoBox i{
+    margin: 0 0 15px;
+    color: var(--accentLight);
+    font-size: 1.6rem;
+}
+
+footer section .footerInfoBox h1{
+    margin: 0 0 10px;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}
+
+footer section .footerInfoBox a{
+    margin: 0;
+    text-decoration: underline;
+    color: var(--textPrimary);
+}
+
+footer section .footerInfoBox:nth-of-type(1) {
+    grid-area: phone;
+}
+
+footer section .footerInfoBox:nth-of-type(2) {
+    grid-area: email;
+}

@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Homepage from './components/Homepage'
 import Header from './components/Header'
+import Footer from './components/Footer'
 import {
   BrowserRouter as Router,
   Route
@@ -18,6 +19,7 @@ function App() {
           <Homepage/>
         } 
       />
+      <Footer/>
     </Router>
   );
 }
