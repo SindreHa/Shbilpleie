@@ -30,7 +30,9 @@ export default class InfoBoxes extends Component {
         return (
             this.state.infoBoxes.map((info, i) => (
                 <div className="infoBox" key={i}>
-                    <i className={info.icon}/>
+                    <div>
+                        <i className={info.icon}/>
+                    </div>
                     <h1>
                         {info.title}
                     </h1>
