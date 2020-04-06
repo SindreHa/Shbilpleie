@@ -12,7 +12,7 @@ export default class Header extends Component {
             title: "SH Bilpleie",
             nav: [
                 {
-                    title: "Hjem",
+                    title: "Forside",
                     path: "/"
                 },
                 {
