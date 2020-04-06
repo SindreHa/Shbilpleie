@@ -36,7 +36,20 @@ export default class Header extends Component {
         icon.addEventListener(
             "click", () => {
                 document.getElementsByClassName("hamburger-icon")[0].classList.toggle("open")
+                /* document.getElementsByClassName("navLinks")[0].setAttribute("style", "display: grid;") */
+                document.getElementsByClassName("navLinks")[0].classList.toggle("openMenu")
         })
+
+        /* document.getElementsByClassName("navLinks")[0].addEventListener("transitionend", (e) => {
+            if (!e.target.classList.contains("openMenu")) {
+                e.target.setAttribute("style", "display: none;")
+            } 
+        }) */
+    }
+
+    hideMenu = () => {
+        document.getElementsByClassName("navLinks")[0].classList.remove("openMenu")
+        document.getElementsByClassName("hamburger-icon")[0].classList.remove("open")
     }
 
     render() {
@@ -53,13 +66,15 @@ export default class Header extends Component {
                                 <span></span>
                             </div>
                         </li>
+                        <div className="navLinks">
                         {
                             this.state.nav.map((e, i) => (
-                                <Link key={i} to={e.path}>
+                                <Link key={i} to={e.path} onClick={this.hideMenu}>
                                     {e.title}
                                 </Link>
                             ))
                         }
+                        </div>
                     </ul>
                     <img src="/img/logo-landscape.png"/>
                 </nav>

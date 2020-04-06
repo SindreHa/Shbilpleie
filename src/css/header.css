@@ -5,7 +5,6 @@ header {
     height: 90px;
     display: flex;
     align-items: center;
-    overflow: hidden;
 }
 
 header nav {
@@ -28,7 +27,13 @@ header nav ul {
     padding: 0;
 }
 
-header nav ul a {
+.navLinks {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    gap: 20px;
+}
+
+header nav ul .navLinks a {
     text-decoration: none;
     color: var(--textprimary);
     background-color: var(--accentDark);
@@ -37,7 +42,7 @@ header nav ul a {
     transition: background-color var(--transitionBG);
 }
 
-header nav ul a:hover {
+header nav ul .navLinks a:hover {
     background-color: var(--accent);
 }
 
@@ -56,29 +61,55 @@ header nav img{
     }
 
     header nav ul{
+        height: 70%;
     }
 
-    header nav ul a{
-        display: none;
+    header nav{
+        position: relative;
     }
+
+    .navLinks {
+        display: none;
+        position: absolute;
+        top: 90px;
+        left: -10px;
+        grid-template-columns: max-content;
+        gap: 10px;
+        background-color: var(--backgroundDark);
+        padding: 10px 20px 20px;
+        border: 2px solid var(--accent);
+        border-radius: 0 0 8px 8px;
+        border-top: none;
+        opacity: 0;
+        transition: opacity .2s ease-out;
+    }
+
+    .openMenu {
+        display: grid;
+        opacity: 1;
+    }
+
     .menu {
         display: block;
         position: relative;
-        padding-left: 35px;
+        padding: 10px 10px 10px 35px;
         user-select: none;
         font-size: 1.2rem;
     }
+
     .menu:hover {
         cursor: pointer;
     }
+
     .hamburger-icon {
         width: 23px;
         position: absolute;
-        top: 2px;
+        top: 12px;
         left: 0px;
         transform: rotate(0deg);
         transition: .5s ease-in-out;
     }
+
     .hamburger-icon span {
         display: block;
         position: absolute;
@@ -90,26 +121,33 @@ header nav img{
         left: 0;
         transition: .3s ease-in-out;
     }
+
     .hamburger-icon span:nth-child(1) {
         top: 0px;
     }
+
     .hamburger-icon span:nth-child(2), .hamburger-icon span:nth-child(3) {
         top: 8px;
     }
+
     .hamburger-icon span:nth-child(4) {
         top: 16px;
     }
+
     .hamburger-icon.open span:nth-child(1) {
         top: 9px;
         width: 0%;
         left: 50%;
     }
+
     .hamburger-icon.open span:nth-child(2) {
         transform: rotate(45deg);
     }
+
     .hamburger-icon.open span:nth-child(3) {
         transform: rotate(-45deg);
     }
+
     .hamburger-icon.open span:nth-child(4) {
         top: 9px;
         width: 0%;
@@ -121,7 +159,12 @@ header nav img{
     header {
         height: 70px;
     }
+
     header nav img{
         height: 35px;
+    }
+
+    .navLinks {
+        top: 70px;
     }
 }
