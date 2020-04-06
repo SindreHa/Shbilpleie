@@ -1,3 +1,13 @@
+:root {
+  --background: #282c33;
+  --textPrimary: #fff;
+}
+
+body, html {
+  background-color: var(--background);
+  color: var(--textPrimary);
+}
+
 body {
   margin: 0;
   font-family: 'Roboto', 'Segoe UI', 'Roboto', 'Oxygen',
