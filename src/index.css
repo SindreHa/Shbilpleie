@@ -1,6 +1,15 @@
 :root {
-  --background: #282c33;
+  --background: #263238;
+  --backgroundDark: #000a12;
+  --backgroundLight: #4f5b62;
+  --accent: #bf360c;
+  --accentLight: #f9683a;
+  --accentDark: #870000;
   --textPrimary: #fff;
+  --textDark: #181d22;
+  --borderRadiusBtn: 5px;
+  --borderRadiusBox: 10px;
+  --transitionBG: .15s ease-out;
 }
 
 body, html {
