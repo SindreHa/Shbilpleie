@@ -1,6 +1,7 @@
 .homepage {
     width: 800px;
     margin: var(--marginTop) auto 0;
+    flex: 1;
 }
 
 .homepage-welcome h1{
