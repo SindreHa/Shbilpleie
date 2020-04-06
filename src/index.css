@@ -2,14 +2,22 @@
   --background: #263238;
   --backgroundDark: #000a12;
   --backgroundLight: #4f5b62;
+  --backgroundWhite: #fff;
   --accent: #bf360c;
   --accentLight: #f9683a;
   --accentDark: #870000;
   --textPrimary: #fff;
   --textDark: #181d22;
+
   --borderRadiusBtn: 5px;
   --borderRadiusBox: 10px;
   --transitionBG: .15s ease-out;
+  --titleSize: 2.5rem;
+  --paragraphSize: 1rem;
+  --iconSize: 3.5rem;
+
+  --boxBorder: 2px solid var(--accent);
+  --marginTop: 30px;
 }
 
 body, html {
@@ -24,4 +32,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.splitter {
+  background-color: var(--accent);
+  height: 1px;
+  width: 10%;
+  margin: var(--marginTop) auto 0;
 }
