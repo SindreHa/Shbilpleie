@@ -10,7 +10,7 @@ header {
 header nav {
     display: grid;
     grid-template-columns: 1fr max-content;
-    width: 800px;
+    width: var(--contentWidth);
     margin: 0 auto;
 }
 

@@ -1,5 +1,5 @@
 .homepage {
-    width: 800px;
+    width: var(--contentWidth);
     margin: var(--marginTop) auto 0;
     flex: 1;
 }

@@ -18,6 +18,8 @@
 
   --boxBorder: 2px solid var(--accent);
   --marginTop: 30px;
+
+  --contentWidth: 1000px;
 }
 
 body, html {
