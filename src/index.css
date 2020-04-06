@@ -22,6 +22,18 @@
   --contentWidth: 1000px;
 }
 
+@media(max-width: 1040px) {
+  :root {
+    --titleSize: 2rem;
+    --paragraphSize: .95rem;
+    --iconSize: 3rem;
+  
+    --marginTop: 30px;
+  
+    --contentWidth: 90%;
+  }
+}
+
 body, html {
   background-color: var(--background);
   color: var(--textPrimary);
