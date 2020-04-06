@@ -5,15 +5,14 @@ footer {
 }
 
 footer section {
-    width: 800px;
+    width: var(--contentWidth);
     height: 100%;
     margin: 0 auto;
-    display: flex;
     align-items: center;
     display: grid;
     grid-template-columns: max-content 1fr max-content max-content;
     grid-template-areas: "logo . phone email";
-    gap: 40px;
+    gap: 60px;
 }
 
 footer section img {
@@ -45,6 +44,17 @@ footer section .footerInfoBox a{
 
 footer section .footerInfoBox:nth-of-type(1) {
     grid-area: phone;
+    position: relative;
+}
+
+footer section .footerInfoBox:nth-of-type(1):after {
+    content: "";
+    top: 34px;
+    bottom: 34px;
+    right: -30px;
+    position: absolute;
+    width: 1px;
+    background-color: var(--accent);
 }
 
 footer section .footerInfoBox:nth-of-type(2) {

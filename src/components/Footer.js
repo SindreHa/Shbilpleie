@@ -26,6 +26,7 @@ export default class Footer extends Component {
             <footer>
                 <section>
                     <img src="/img/logo.png"/>
+                    
                     <div class="footerInfoBox">
                         <i className={this.state.phone.icon}/>
                         <h1>
@@ -35,6 +36,7 @@ export default class Footer extends Component {
                             {this.state.phone.description}
                         </a>
                     </div>
+
                     <div class="footerInfoBox">
                         <i className={this.state.email.icon}/>
                         <h1>
