@@ -1,16 +1,15 @@
 .infoBox {
     /* border: var(--boxBorder); */
     background-color: var(--backgroundLight);
-    position: relative;
-    margin-top: 40px;
+    margin-top: 30px;
     border-radius: var(--borderRadiusBox);
 }
-
+.infoBox div {
+    margin-top: -35px;
+    text-align: center;
+}
 .infoBox i {
-    position: absolute;
     font-size: var(--iconSize);
-    left: calc(50% - (78.25px/2));
-    top: -40px;
     background-color: var(--backgroundLight);
     padding: 10px;
     border: var(--boxBorder);
@@ -18,11 +17,12 @@
 }
 
 .infoBox h1 {
-    margin: 55px 20px 0;
+    margin: 15px 20px 0;
     text-align: center;
 }
 
 .infoBox p {
     margin: 20px 20px 30px;
     text-align: center;
+    font-size: var(--paragraphSize);
 }

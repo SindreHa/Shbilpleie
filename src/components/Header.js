@@ -27,11 +27,32 @@ export default class Header extends Component {
         }
     }
 
+    componentDidMount() {
+        this.eventListeners();
+    }
+
+    eventListeners = () => {
+        const icon = document.getElementsByClassName("menu")[0];
+        icon.addEventListener(
+            "click", () => {
+                document.getElementsByClassName("hamburger-icon")[0].classList.toggle("open")
+        })
+    }
+
     render() {
         return (
             <header>
                 <nav>
                     <ul>
+                        <li className="menu">
+                            Meny
+                            <div className="hamburger-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </li>
                         {
                             this.state.nav.map((e, i) => (
                                 <Link key={i} to={e.path}>

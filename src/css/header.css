@@ -5,13 +5,16 @@ header {
     height: 90px;
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 
 header nav {
     display: grid;
     grid-template-columns: 1fr max-content;
+    align-items: center;
     width: var(--contentWidth);
     margin: 0 auto;
+    height: 100%;
 }
 
 header nav ul {
@@ -39,5 +42,86 @@ header nav ul a:hover {
 }
 
 header nav img{
-    height: 100%;
+    height: 50px;
+}
+
+.menu {
+    display: none;
+}
+
+
+@media(max-width: 900px) {
+    header nav ul {
+        grid-template-columns: repeat(3, max-content);
+    }
+
+    header nav ul{
+    }
+
+    header nav ul a{
+        display: none;
+    }
+    .menu {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        user-select: none;
+        font-size: 1.2rem;
+    }
+    .menu:hover {
+        cursor: pointer;
+    }
+    .hamburger-icon {
+        width: 23px;
+        position: absolute;
+        top: 2px;
+        left: 0px;
+        transform: rotate(0deg);
+        transition: .5s ease-in-out;
+    }
+    .hamburger-icon span {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        border-radius: 3px;
+        background: var(--textPrimary);
+        opacity: 1;
+        left: 0;
+        transition: .3s ease-in-out;
+    }
+    .hamburger-icon span:nth-child(1) {
+        top: 0px;
+    }
+    .hamburger-icon span:nth-child(2), .hamburger-icon span:nth-child(3) {
+        top: 8px;
+    }
+    .hamburger-icon span:nth-child(4) {
+        top: 16px;
+    }
+    .hamburger-icon.open span:nth-child(1) {
+        top: 9px;
+        width: 0%;
+        left: 50%;
+    }
+    .hamburger-icon.open span:nth-child(2) {
+        transform: rotate(45deg);
+    }
+    .hamburger-icon.open span:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+    .hamburger-icon.open span:nth-child(4) {
+        top: 9px;
+        width: 0%;
+        left: 50%;
+    }
+}
+
+@media(max-width: 540px) {
+    header {
+        height: 70px;
+    }
+    header nav img{
+        height: 35px;
+    }
 }
