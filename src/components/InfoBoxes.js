@@ -29,7 +29,7 @@ export default class InfoBoxes extends Component {
                 },
                 {
                     title: "Jevnlig vedlikehold",
-                    description: "Ved å jevnlig vedlikeholde lakken og interiøret til bilen vil den ikke bare se bra ut, men også holde seg i bedre stand over lenger tid. Med polering og voksing vil lakken holde seg beskyttet mot skader fra blandt annet sollys og salt eller asfalt tjære",
+                    description: "Ved å jevnlig vedlikeholde lakken og interiøret til bilen vil den ikke bare se bra ut, men også holde seg i bedre stand over lenger tid. Med polering og voksing vil lakken holde seg beskyttet mot salt- og asfaltpartikler",
                     icon: faCalendarAlt
                 },
                 {
