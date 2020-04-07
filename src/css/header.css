@@ -96,6 +96,7 @@ header nav object{
         border: 2px solid var(--accent);
         border-radius: 0 0 8px 8px;
         border-top: none;
+        max-height: 0px;
         transition: max-height .3s ease-out;
     }
 

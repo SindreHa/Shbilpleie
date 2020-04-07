@@ -40,18 +40,29 @@ export default class Header extends Component {
                 document.getElementsByClassName("hamburger-icon")[0].classList.toggle("open")
                 /* document.getElementsByClassName("navLinks")[0].setAttribute("style", "display: grid;") */
                 navLinkCont.classList.toggle("openMenu")
-                if (navLinkCont.classList.contains("openMenu")) {
-                    navLinkCont.style.maxHeight = "170px";
-                } else {
-                    navLinkCont.style.maxHeight = "0px";
+                if (window.innerWidth < 900) {
+                    if (navLinkCont.classList.contains("openMenu")) {
+                        navLinkCont.style.maxHeight = "170px";
+                    } else {
+                        navLinkCont.style.maxHeight = "0px";
+                    }
                 }
+                    
+        })
+
+        window.addEventListener("resize", () => {
+            if (window.innerWidth > 900) {
+                document.getElementsByClassName("navLinks")[0].style.maxHeight = null;
+            } 
         })
     }
 
     hideMenu = () => {
         document.getElementsByClassName("navLinks")[0].classList.remove("openMenu")
         document.getElementsByClassName("hamburger-icon")[0].classList.remove("open")
-        document.getElementsByClassName("navLinks")[0].style.maxHeight = "0";
+        if (window.innerWidth < 900) {
+            document.getElementsByClassName("navLinks")[0].style.maxHeight = "0";
+        }
     }
 
     render() {
@@ -78,7 +89,7 @@ export default class Header extends Component {
                         }
                         </div>
                     </ul>
-                    <object data="/img/logo-landscape.svg" type="image/svg+xml"/>
+                    <object data="/img/logo-landscape.svg" type="image/svg+xml">logo</object>
                 </nav>
             </header>
         )

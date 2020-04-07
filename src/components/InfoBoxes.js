@@ -47,8 +47,8 @@ export default class InfoBoxes extends Component {
             this.state.infoBoxes.map((info, i) => {
             delay += 70;
             return (    
-                <SlideIn in={this.state.transIn} delay={delay}>
-                    <div className="infoBox" key={i}>
+                <SlideIn in={this.state.transIn} delay={delay} key={i}>
+                    <div className="infoBox" >
                         <div>
                             <FontAwesomeIcon icon={info.icon}/>
                         </div>

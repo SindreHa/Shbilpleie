@@ -24,7 +24,7 @@ export default class Packs extends Component {
                 {
                     style: "wash",
                     title: "Utvendig vask",
-                    description: "Skånsom og grundig utvendig vask som fjerner salt- og asfaltpartikler",
+                    description: "Skånsom og grundig utvendig vask som fjerner salt- og asfaltpartikler fra lakk og felger",
                     price: "250,-"
                 },
                 {
@@ -36,25 +36,25 @@ export default class Packs extends Component {
                 {
                     style: "wash",
                     title: "Innvendig og utvendig vask",
-                    description: "Både innvendig og utvendig vask. Skånsom og grundig utvendig vask som fjerner salt- og asfaltpartikler. Grundig og detaljert vask og rens av interiør. Gummifornyer blir påført på dashboard og andre deler av plastikk/gummi for å gjenopprette den opprinnelige overflate-farge og etterlate et klart, beskyttende belegg",
+                    description: "Både innvendig og utvendig vask. Skånsom og grundig utvendig vask som fjerner salt- og asfaltpartikler fra lakk og felger. Grundig og detaljert vask og rens av interiør. Gummifornyer blir påført på dashboard og andre deler av plastikk/gummi for å gjenopprette den opprinnelige overflate-farge og etterlate et klart, beskyttende belegg",
                     price: "500,-"
                 },
                 {
                     style: "wash-polish",
                     title: "Utvendig vask m/voksing",
-                    description: "Skånsom og grundig utvendig vask som fjerner salt- og asfaltpartikler etterfulgt av et høykvalitets vokslag for beskyttelse og høy glans",
+                    description: "Skånsom og grundig utvendig vask som fjerner salt- og asfaltpartikler fra lakk og felger etterfulgt av et høykvalitets vokslag for beskyttelse og høy glans",
                     price: "800,-"
                 },
                 {
                     style: "wash-polish",
                     title: "Utvendig og innvendig vask m/voksing",
-                    description: "Skånsom og grundig utvendig vask som fjerner salt- og asfaltpartikler etterfulgt av et høykvalitets vokslag for beskyttelse og høy glans. Grundig og detaljert vask og rens av interiør. Gummifornyer blir påført på dashboard og andre deler av plastikk/gummi for å gjenopprette den opprinnelige overflate-farge og etterlate et klart, beskyttende belegg",
+                    description: "Skånsom og grundig utvendig vask som fjerner salt- og asfaltpartikler fra lakk og felger etterfulgt av et høykvalitets vokslag for beskyttelse og høy glans. Grundig og detaljert vask og rens av interiør. Gummifornyer blir påført på dashboard og andre deler av plastikk/gummi for å gjenopprette den opprinnelige overflate-farge og etterlate et klart, beskyttende belegg",
                     price: "1000,-"
                 },
                 {
                     style: "wash-polish",
                     title: "Utvendig og innvendig vask m/rubbing og voksing",
-                    description: "Skånsom og grundig utvendig vask som fjerner salt- og asfaltpartikler. Fjerning av vaskeriper og oksidasjon i lakken etterfulgt av polering og et høykvalitets vokslag for beskyttelse og høy glans. Grundig og detaljert vask og rens av interiør. Gummifornyer blir påført på dashboard og andre deler av plastikk/gummi for å gjenopprette den opprinnelige overflate-farge og etterlate et klart, beskyttende belegg",
+                    description: "Skånsom og grundig utvendig vask som fjerner salt- og asfaltpartikler fra lakk og felger. Fjerning av vaskeriper og oksidasjon i lakken etterfulgt av polering og et høykvalitets vokslag for beskyttelse og høy glans. Grundig og detaljert vask og rens av interiør. Gummifornyer blir påført på dashboard og andre deler av plastikk/gummi for å gjenopprette den opprinnelige overflate-farge og etterlate et klart, beskyttende belegg",
                     price: "1500,-"
                 }
             ]
