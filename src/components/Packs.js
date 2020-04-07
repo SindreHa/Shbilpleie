@@ -24,7 +24,7 @@ export default class Packs extends Component {
                 {
                     style: "wash",
                     title: "Utvendig vask",
-                    description: "Skånsom og grundig utvendig vask som fjerner salt- og asfaltpartikler fra lakk og felger.",
+                    description: "Skånsom og grundig utvendig vask som fjerner salt- og asfaltpartikler fra lakk og felger",
                     price: "250,-"
                 },
                 {
