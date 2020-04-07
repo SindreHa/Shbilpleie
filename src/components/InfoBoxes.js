@@ -40,10 +40,10 @@ export default class InfoBoxes extends Component {
     }
 
     render() {
-        let delay = -50;
+        let delay = -70;
         return (
             this.state.infoBoxes.map((info, i) => {
-            delay += 50;
+            delay += 70;
             return (    
                 <SlideIn in={this.state.transIn} delay={delay}>
                     <div className="infoBox" key={i}>
