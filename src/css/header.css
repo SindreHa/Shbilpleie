@@ -8,12 +8,11 @@ header {
 }
 
 header nav {
-    display: grid;
-    grid-template-columns: 1fr max-content;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     width: var(--contentWidth);
     margin: 0 auto;
-    height: 100%;
 }
 
 header nav ul {
@@ -27,7 +26,20 @@ header nav ul {
     padding: 0;
 }
 
-.navLinks {
+header nav ul a {
+    text-decoration: none;
+    color: var(--textprimary);
+    background-color: var(--accentDark);
+    padding: 10px 15px;
+    border-radius: var(--borderRadiusBtn);
+    transition: background-color var(--transitionBG);
+}
+
+header nav ul a:hover {
+    background-color: var(--accent);
+}
+
+/* .navLinks {
     display: grid;
     grid-template-columns: repeat(3, max-content);
     gap: 20px;
@@ -44,10 +56,14 @@ header nav ul .navLinks a {
 
 header nav ul .navLinks a:hover {
     background-color: var(--accent);
-}
+} */
 
 header nav object{
     height: 50px;
+}
+
+.hamburger-icon {
+    display: none;
 }
 
 .menu {
@@ -55,33 +71,25 @@ header nav object{
 }
 
 
-@media(max-width: 900px) {
-    header nav ul {
-        grid-template-columns: repeat(3, max-content);
-    }
-
-    header nav ul{
-        height: 70%;
-    }
-
-    header nav{
+@media(max-width: 730px) {
+    header {
+        height: 100px;
         position: relative;
     }
 
-    .navLinks {
-        display: none;
+    header nav ul{
+        display: flex;
+        flex-direction: column;
         position: absolute;
-        top: 90px;
-        left: -10px;
-        grid-template-columns: max-content;
-        gap: 10px;
+        top: 100%;
+        left: 0;
+        right: 0;
+    }
+
+    header nav ul a{
+        width: 90%;
         background-color: var(--backgroundDark);
-        padding: 10px 20px 20px;
-        border: 2px solid var(--accent);
-        border-radius: 0 0 8px 8px;
-        border-top: none;
-        opacity: 0;
-        transition: opacity .2s ease-out;
+        padding-left: calc(100% - 90%);
     }
 
     .openMenu {
@@ -102,12 +110,18 @@ header nav object{
     }
 
     .hamburger-icon {
+        display: block;
         width: 23px;
-        position: absolute;
         top: 12px;
         left: 0px;
         transform: rotate(0deg);
         transition: .5s ease-in-out;
+    }
+
+    .hamburger-icon p {
+        position: absolute;
+        right: 150%;
+        top: 100%;
     }
 
     .hamburger-icon span {

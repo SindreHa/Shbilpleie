@@ -18,17 +18,13 @@ export default class Header extends Component {
                 {
                     title: "Pakker og priser",
                     path: "/pakker"
-                },
-                {
-                    title: "Spørsmål og svar",
-                    path: "/faq"
                 }
             ]
         }
     }
 
     componentDidMount() {
-        this.eventListeners();
+        //this.eventListeners();
     }
 
     eventListeners = () => {
@@ -53,30 +49,36 @@ export default class Header extends Component {
     }
 
     render() {
+        
+        const mq = window.matchMedia( "(min-width: 500px)" );
+
+        if (mq.matches) {
+            console.log("større")
+        } else {
+            console.log("mindre")
+        }
         return (
             <header>
                 <nav>
-                    <ul>
-                        <li className="menu">
-                            Meny
-                            <div className="hamburger-icon">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                        </li>
-                        <div className="navLinks">
-                        {
-                            this.state.nav.map((e, i) => (
-                                <Link key={i} to={e.path} onClick={this.hideMenu}>
-                                    {e.title}
-                                </Link>
-                            ))
-                        }
-                        </div>
-                    </ul>
                     <object data="/img/logo-landscape.svg" type="image/svg+xml"/>
+                    <div className="hamburger-icon">
+                        <div>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        </div>
+                        <p>Meny</p>
+                    </div>
+                    <ul>
+                        {
+                        this.state.nav.map((e, i) => (
+                            <Link key={i} to={e.path} onClick={this.hideMenu}>
+                                {e.title}
+                            </Link>
+                        ))
+                        }
+                    </ul>
                 </nav>
             </header>
         )
