@@ -9,7 +9,7 @@ export default class Homepage extends Component {
         super()
         this.state = {
             welcomeTitle: "Velkommen til SH Bilpleie",
-            welcomeParagraph: "SH Bilpleie tilbyr alle tjenester innen bilpleie. Alt fra enkel utvendig/innvendig vask til innvendig rens, polering, lakkrens og lakkforsegling. Og alt til en rimelig nabopris. Velg ut en pakke og få bilen din tilbake til sanne blanke tilstand."
+            welcomeParagraph: "SH Bilpleie tilbyr alle tjenester innen bilpleie. Alt fra enkel utvendig/innvendig vask til innvendig rens, polering, lakkrens og lakkforsegling. Alt til en rimelig nabopris. Velg ut en pakke og få bilen din tilbake til sanne blanke tilstand."
         }
     }
 
