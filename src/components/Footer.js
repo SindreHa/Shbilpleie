@@ -30,7 +30,7 @@ export default class Footer extends Component {
         return (
             <footer>
                 <section>
-                    <img src="/img/logo.png"/>
+                <object data="/img/logo.svg" type="image/svg+xml"/>
                     {
                         this.state.contactInfo.map((e, i) => (
                             <div className="footerInfoBox" key={i}>
