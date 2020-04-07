@@ -13,6 +13,10 @@ export default class Homepage extends Component {
         }
     }
 
+    componentDidMount() {
+        document.title = "SH Bilpleie - Forside"
+    }
+
     render() {
         return (
             <div className="homepage">
