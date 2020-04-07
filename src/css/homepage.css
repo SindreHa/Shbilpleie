@@ -7,7 +7,6 @@
 .homepage-welcome h1{
     margin: 0;
     font-size: var(--titleSize);
-    font-weight: 500;
 }
 
 .homepage-welcome p{

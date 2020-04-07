@@ -24,7 +24,7 @@ footer section .footerInfoBox {
     text-align: center;
 }
 
-footer section .footerInfoBox i{
+footer section .footerInfoBox svg{
     margin: 0 0 15px;
     color: var(--accentLight);
     font-size: 1.6rem;
