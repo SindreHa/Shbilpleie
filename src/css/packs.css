@@ -1,23 +1,44 @@
 .packs-wrapper {
+    flex: 1;
+    width: var(--contentWidth);
+    margin: 0 auto;
+}
+
+.packs {
     display: grid;
-    grid-template-columns: 1fr 1fr; 
-    gap: 20px
+    grid-template-columns: 1fr; 
+    gap: 20px;
+    margin: var(--marginTop) 0;
 }
 .pack {
-    padding: 20px 10px;
-    border-radius: 15px;
+    width: 80%;
+    border-radius: 8px;
+    margin: 0 auto;
+    display: grid;
+    gap: 15px 20px;
+    grid-template-areas: 
+        "title price"
+        "description priceDesc";
+    grid-template-columns: 1fr 100px;
+    grid-template-rows: repeat(2, max-content);
+    background-color: var(--backgroundLight);
 }
 .pack h1 {
-    margin: 0px 8px 10px 8px;
+    margin: 0;
+    padding: 15px 15px 0;
 }
 .pack p {
-    margin: 0px 8px;
+    margin: 0;
+    padding: 0 15px 15px;
 }
-.simple {
+.price {
+}
+
+.wash {
     background: rgb(2,0,36);
-    background: linear-gradient(149deg, rgba(2,0,36,1) 0%, rgba(4,4,94,1) 35%, rgba(0,212,255,1) 100%);
+    background: linear-gradient(195deg, #000e24 0%, #043d5e 40%, #00a2ff 100%);
 }
-.normal {
+.wash-polish {
     background: rgb(85,0,0);
-    background: linear-gradient(149deg, rgba(85,0,0,1) 0%, rgba(176,71,0,1) 35%, rgba(207,153,0,1) 100%);
+    background: linear-gradient(195deg, #270000 0%, #8b2800 40%, #cf8d00 100%);
 }
