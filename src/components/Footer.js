@@ -11,7 +11,7 @@ export default class Footer extends Component {
             contactInfo: [
                 {
                     title: "Telefon",
-                    link: "tel:90566159",
+                    link: "sms:90566159",
                     description: "+47 90566159",
                     icon: faSms
                 },
