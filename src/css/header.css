@@ -46,7 +46,7 @@ header nav ul .navLinks a:hover {
     background-color: var(--accent);
 }
 
-header nav img{
+header nav object{
     height: 50px;
 }
 
@@ -160,7 +160,7 @@ header nav img{
         height: 70px;
     }
 
-    header nav img{
+    header nav object{
         height: 35px;
     }
 

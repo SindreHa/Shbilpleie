@@ -15,7 +15,7 @@ footer section {
     gap: 60px;
 }
 
-footer section img {
+footer section object {
     grid-area: logo;
     height: 80%;
 }
@@ -76,7 +76,7 @@ footer section .footerInfoBox:nth-of-type(2) {
             "phone email";
     }
 
-    footer section img{
+    footer section object{
         margin: 0 auto;
         height: 100%;
     }
