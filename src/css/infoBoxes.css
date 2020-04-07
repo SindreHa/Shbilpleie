@@ -9,7 +9,7 @@
     margin-top: -35px;
     text-align: center;
 }
-.infoBox i {
+.infoBox svg {
     font-size: var(--iconSize);
     background-color: var(--backgroundDark);
     padding: 10px;

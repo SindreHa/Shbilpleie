@@ -42,3 +42,14 @@
     background: rgb(85,0,0);
     background: linear-gradient(195deg, #270000 0%, #8b2800 40%, #cf8d00 100%);
 }
+
+@media(max-width: 1040px) {
+    .pack {
+        width: 90%;
+    }
+}
+@media(max-width: 900px) {
+    .pack {
+        width: 100%;
+    }
+}

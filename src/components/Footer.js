@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import '../css/footer.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSms, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 export default class Footer extends Component {
 
@@ -11,13 +13,13 @@ export default class Footer extends Component {
                     title: "Telefon",
                     link: "tel:90566159",
                     description: "+47 90566159",
-                    icon: "fas fa-sms"
+                    icon: faSms
                 },
                 {
                     title: "E-Post",
                     link: "mailto:SHBilpleie@outlook.com",
                     description: "SHBilpleie@outlook.com",
-                    icon: "far fa-envelope"
+                    icon: faEnvelope
                 }
             ]
                 
@@ -28,11 +30,11 @@ export default class Footer extends Component {
         return (
             <footer>
                 <section>
-                    <img src="/img/logo.png"/>
+                    <img src="/img/logo-LowRes.png"/>
                     {
                         this.state.contactInfo.map((e, i) => (
                             <div className="footerInfoBox" key={i}>
-                                <i className={e.icon}/>
+                                    <FontAwesomeIcon icon={e.icon}/>
                                 <h1>
                                     {e.title}
                                 </h1>
