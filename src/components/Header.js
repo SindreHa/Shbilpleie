@@ -33,23 +33,25 @@ export default class Header extends Component {
 
     eventListeners = () => {
         const icon = document.getElementsByClassName("menu")[0];
+        const navLinkCont = document.getElementsByClassName("navLinks")[0];
+        //const height = navLinkCont.scrollHeight;
         icon.addEventListener(
             "click", () => {
                 document.getElementsByClassName("hamburger-icon")[0].classList.toggle("open")
                 /* document.getElementsByClassName("navLinks")[0].setAttribute("style", "display: grid;") */
-                document.getElementsByClassName("navLinks")[0].classList.toggle("openMenu")
+                navLinkCont.classList.toggle("openMenu")
+                if (navLinkCont.classList.contains("openMenu")) {
+                    navLinkCont.style.maxHeight = "170px";
+                } else {
+                    navLinkCont.style.maxHeight = "0px";
+                }
         })
-
-        /* document.getElementsByClassName("navLinks")[0].addEventListener("transitionend", (e) => {
-            if (!e.target.classList.contains("openMenu")) {
-                e.target.setAttribute("style", "display: none;")
-            } 
-        }) */
     }
 
     hideMenu = () => {
         document.getElementsByClassName("navLinks")[0].classList.remove("openMenu")
         document.getElementsByClassName("hamburger-icon")[0].classList.remove("open")
+        document.getElementsByClassName("navLinks")[0].style.maxHeight = "0";
     }
 
     render() {

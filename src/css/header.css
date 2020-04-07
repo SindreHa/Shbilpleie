@@ -9,7 +9,8 @@ header {
 
 header nav {
     display: grid;
-    grid-template-columns: 1fr max-content;
+    grid-template-columns: max-content 1fr;
+    grid-template-areas: "logo nav";
     align-items: center;
     width: var(--contentWidth);
     margin: 0 auto;
@@ -17,13 +18,13 @@ header nav {
 }
 
 header nav ul {
+    grid-area: nav;
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(3, max-content);
     gap: 20px;
     align-items: center;
     flex-direction: row;
-    margin: 0;
+    margin: 0 0 0 auto;
     padding: 0;
 }
 
@@ -31,6 +32,7 @@ header nav ul {
     display: grid;
     grid-template-columns: repeat(3, max-content);
     gap: 20px;
+    overflow: hidden;
 }
 
 header nav ul .navLinks a {
@@ -47,6 +49,7 @@ header nav ul .navLinks a:hover {
 }
 
 header nav object{
+    grid-area: logo;
     height: 50px;
 }
 
@@ -56,43 +59,50 @@ header nav object{
 
 
 @media(max-width: 900px) {
-    header nav ul {
-        grid-template-columns: repeat(3, max-content);
-    }
-
-    header nav ul{
-        height: 70%;
-    }
 
     header nav{
         position: relative;
+        grid-template-columns: 1fr max-content;
+        grid-template-areas: "logo nav";
+        justify-content: space-between;
+    }
+
+    header nav ul {
+        height: 70%;
+        grid-template-columns: 1fr;
+    }
+
+    header nav ul a{
+        margin: 0 20px;
+    }
+
+    header nav ul a:last-of-type{
+        margin-bottom: 20px;
+    }
+
+    header nav ul a:first-of-type{
+        margin-top: 10px;
     }
 
     .navLinks {
-        display: none;
+        display: grid;
         position: absolute;
         top: 90px;
-        left: -10px;
+        right: -10px;
         grid-template-columns: max-content;
         gap: 10px;
         background-color: var(--backgroundDark);
-        padding: 10px 20px 20px;
+        padding: 0;
         border: 2px solid var(--accent);
         border-radius: 0 0 8px 8px;
         border-top: none;
-        opacity: 0;
-        transition: opacity .2s ease-out;
-    }
-
-    .openMenu {
-        display: grid;
-        opacity: 1;
+        transition: max-height .3s ease-out;
     }
 
     .menu {
         display: block;
         position: relative;
-        padding: 10px 10px 10px 35px;
+        padding: 10px 35px 10px 0;
         user-select: none;
         font-size: 1.2rem;
     }
@@ -105,7 +115,7 @@ header nav object{
         width: 23px;
         position: absolute;
         top: 12px;
-        left: 0px;
+        right: 0px;
         transform: rotate(0deg);
         transition: .5s ease-in-out;
     }
@@ -166,5 +176,12 @@ header nav object{
 
     .navLinks {
         top: 70px;
+    }
+}
+
+@media(max-width: 375px) {
+    header nav object{
+        width: 90%;
+        height: auto;
     }
 }
