@@ -76,7 +76,7 @@ export default class Header extends Component {
                         }
                         </div>
                     </ul>
-                    <img src="/img/logo-landscape-LowRes.png"/>
+                    <img src="/img/logo-landscape.png"/>
                 </nav>
             </header>
         )
