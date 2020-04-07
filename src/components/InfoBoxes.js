@@ -1,11 +1,24 @@
 import React, { Component } from 'react'
 import '../css/infoBoxes.css';
+import { CSSTransition }  from 'react-transition-group';
 
+const SlideIn = ({in: inProp, children, delay}) => (
+    
+    <CSSTransition
+        unmountOnExit
+        in={inProp}
+        timeout={delay}
+        classNames='slideIn'
+        appear >
+            {children}
+    </CSSTransition>
+);
 export default class InfoBoxes extends Component {
 
     constructor() {
         super()
         this.state = {
+            transIn: true,
             infoBoxes: [
                 {
                     title: "En fornøyd bil",
@@ -27,20 +40,26 @@ export default class InfoBoxes extends Component {
     }
 
     render() {
+        let delay = -50;
         return (
-            this.state.infoBoxes.map((info, i) => (
-                <div className="infoBox" key={i}>
-                    <div>
-                        <i className={info.icon}/>
+            this.state.infoBoxes.map((info, i) => {
+            delay += 50;
+            return (    
+                <SlideIn in={this.state.transIn} delay={delay}>
+                    <div className="infoBox" key={i}>
+                        <div>
+                            <i className={info.icon}/>
+                        </div>
+                        <h1>
+                            {info.title}
+                        </h1>
+                        <p>
+                            {info.description}
+                        </p>
                     </div>
-                    <h1>
-                        {info.title}
-                    </h1>
-                    <p>
-                        {info.description}
-                    </p>
-                </div>
-            ))
+                </SlideIn>
+            )
+            })
         )
     }
 }

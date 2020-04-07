@@ -1,11 +1,25 @@
 import React, { Component } from 'react'
 import '../css/packs.css';
+import { CSSTransition }  from 'react-transition-group';
+
+const SlideIn = ({in: inProp, children, delay}) => (
+    
+    <CSSTransition
+        unmountOnExit
+        in={inProp}
+        timeout={delay}
+        classNames='slideIn'
+        appear >
+            {children}
+    </CSSTransition>
+);
 
 export default class Packs extends Component {
 
     constructor() {
         super()
         this.state = {
+            transIn: true,
             packs: [
                 {
                     packId: "Vask",
@@ -58,22 +72,25 @@ export default class Packs extends Component {
     }
 
     render() {
+        let delay = -70;
         return (
             <div className="packs-wrapper">
                 <h1 style={{textAlign: "center"}}>Pakker og priser</h1>
                 <div className="splitter"/>
                 <section className="packs">
                 {
-                    this.state.packs.map((pack, i) => (
-                        <>
+                    this.state.packs.map((pack, i) => {
+                        delay += 70
+                        return(
+                        <SlideIn in={this.state.transIn} delay={delay}>
                         <div className={"pack " + pack.style} key={i}>
                             <h1>{pack.title}</h1>
                             <h1 className="priceTitle">Pris</h1>
                             <p>{pack.description}</p>
                             <p className="price">{pack.price}</p>
                         </div>
-                        </>
-                    )) 
+                        </SlideIn>
+                    )}) 
                 }
                 </section>
             </div>
