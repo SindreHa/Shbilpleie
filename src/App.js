@@ -26,12 +26,12 @@ function App() {
             <Packs/>
           } 
         />
-        <Route 
+        {/* <Route 
           exact path="/faq" 
           render={props => 
             <Faq/>
           } 
-        />
+        /> */}
       <Footer/>
     </Router>
   );

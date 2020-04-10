@@ -18,10 +18,6 @@ export default class Header extends Component {
                 {
                     title: "Pakker og priser",
                     path: "/pakker"
-                },
-                {
-                    title: "Spørsmål og svar",
-                    path: "/faq"
                 }
             ]
         }

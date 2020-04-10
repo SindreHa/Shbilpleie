@@ -17,7 +17,7 @@ footer section {
 
 footer section object {
     grid-area: logo;
-    height: 80%;
+    height: 110px;
 }
 
 footer section .footerInfoBox {
@@ -78,7 +78,7 @@ footer section .footerInfoBox:nth-of-type(2) {
 
     footer section object{
         margin: 0 auto;
-        height: 100%;
+        height: 100px;
     }
 
     footer section .footerInfoBox:nth-of-type(1):after {
