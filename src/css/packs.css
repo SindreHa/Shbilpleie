@@ -31,7 +31,17 @@
     margin: 0;
     padding: 0 15px 15px;
 }
-.price {
+
+#extraPacks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#extraPacks .pack{
+    width: 100%;
 }
 
 .wash {
@@ -42,14 +52,30 @@
     background: rgb(85,0,0);
     background: linear-gradient(195deg, #270000 0%, #8b2800 40%, #cf8d00 100%);
 }
+.extra {
+    background: rgb(85,0,0);
+    background: linear-gradient(195deg, #252530 0%, #373e44 40%, #6a6d7a 100%);
+}
 
 @media(max-width: 1040px) {
-    .pack {
+    .pack, #extraPacks {
         width: 90%;
     }
 }
 @media(max-width: 900px) {
-    .pack {
+    .pack, #extraPacks {
         width: 100%;
+    }
+    .pack h1 {
+        font-size: 1.3rem;
+    }
+    .pack p {
+        font-size: var(--paragraphSize);
+    }
+}
+
+@media(max-width: 700px) {
+    #extraPacks {
+       grid-template-columns: 1fr;
     }
 }
