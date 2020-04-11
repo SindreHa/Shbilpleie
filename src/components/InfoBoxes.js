@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import '../css/infoBoxes.css';
 import { CSSTransition }  from 'react-transition-group';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faClock, faSmile, faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
+import { faStopwatch, faSmile, faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
 
 const SlideIn = ({in: inProp, children, delay}) => (
     
@@ -33,10 +33,10 @@ export default class InfoBoxes extends Component {
                     icon: faCalendarAlt
                 },
                 {
-                    title: "Ferdig på dagen",
-                    description: "Jeg garanterer ferdig behandling av bilen på under en dag på alle pakker. Lever bilen på morgenen og ha den tilbake senest på kveldstid",
-                    icon: faClock
-                }
+                    title: "Rask service",
+                    description: "Jeg tilbyr rask behandling av bilen din. På de fleste pakker får du bilen tilbake samme dag.",
+                    icon: faStopwatch
+                },
             ]
         }
     }
