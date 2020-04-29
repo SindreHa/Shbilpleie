@@ -2,6 +2,7 @@
     flex: 1;
     width: var(--contentWidth);
     margin: 0 auto;
+    overflow: hidden;
 }
 
 .packs {

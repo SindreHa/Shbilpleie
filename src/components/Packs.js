@@ -80,7 +80,7 @@ export default class Packs extends Component {
     }
 
     render() {
-        let delay = -70;
+        let delay = -130;
         return (
             <div className="packs-wrapper">
                 <h1 style={{textAlign: "center"}}>Pakker og priser</h1>
@@ -88,7 +88,7 @@ export default class Packs extends Component {
                 <section className="packs">
                 {
                     this.state.packs.map((pack, i) => {
-                        delay += 70
+                        delay += 130
                         return(
                         <SlideIn in={this.state.transIn} delay={delay} key={i}>
                         <div className={"pack " + pack.style}>
