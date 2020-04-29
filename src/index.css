@@ -67,17 +67,16 @@ body {
 
 /* Component transitions */
 .slideIn-appear {
-	opacity: 0;
+  opacity: 0;
+  transform: translatey(500px)
 }
 .slideIn-enter {
 	opacity: 0;
 }
 .slideIn-enter-done {
-	opacity: 1;
-	transition: opacity .5s;
-	animation-name: slideInAnim;
-	animation-duration: .5s;
-	animation-iteration-count: 1;
+  opacity: 1;
+  transform: translatey(0px);
+	transition: opacity .8s, transform .8s cubic-bezier(.30,.99,.50,1);
 }
 .slideIn-exit {
 	opacity: 1;
@@ -87,9 +86,8 @@ body {
 	transition: opacity 500ms;
 }
 @keyframes slideInAnim {
-	0% {transform: translatey(100px)}
-	70% {transform: translatey(-5px)}
-	100% {transform: translatey(0px)}
+  from {transform: translatey(500px)}
+  to {transform: translatey(0px)}
 }
 
 .fadeIn-appear {
