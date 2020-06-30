@@ -76,7 +76,7 @@ body {
 .slideIn-enter-done {
   opacity: 1;
   transform: translatey(0px);
-	transition: opacity .8s, transform .8s cubic-bezier(.30,.99,.50,1);
+	transition: opacity .6s, transform .8s cubic-bezier(.30,.99,.50,1);
 }
 .slideIn-exit {
 	opacity: 1;
