@@ -15,6 +15,10 @@
     font-size: var(--paragraphSize);
 }
 
+.homepage-welcome p span{
+    font-weight: bold;
+}
+
 .infoBoxes {
     margin-top: var(--marginTop);
     display: grid;
