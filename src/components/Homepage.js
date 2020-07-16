@@ -26,6 +26,9 @@ export default class Homepage extends Component {
                     <p>
                         {this.state.welcomeParagraph}
                     </p>
+                    <p style={{marginTop: 25 + "px"}}>
+                        <span>NB! Dette er en hobbynettside som ikke tilhører noen offisiell bilpleie forretning</span>
+                    </p>
                 </section>
 
                 <div className="splitter"/>
