@@ -3,6 +3,7 @@
     background: linear-gradient(149deg, #550000 0%, #b04700 50%, #cf9900 100%);
     margin-top: 30px;
     border-radius: var(--borderRadiusBox);
+    box-shadow: 0px 8px 10px 0px #07070777;
 }
 
 .infoBox div {

@@ -2,7 +2,7 @@
     width: var(--contentWidth);
     margin: var(--marginTop) auto 0;
     flex: 1;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .homepage-welcome h1{

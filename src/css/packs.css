@@ -23,6 +23,7 @@
     grid-template-columns: 1fr 100px;
     grid-template-rows: repeat(2, max-content);
     background-color: var(--backgroundLight);
+    box-shadow: 0px 3px 6px 0px #07070777;
 }
 .pack h1 {
     margin: 0;
